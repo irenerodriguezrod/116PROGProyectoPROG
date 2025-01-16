@@ -12,7 +12,7 @@
         <img src="https://media.tenor.com/uj-429a6v-YAAAAi/pixel-art-gmail.gif" alt="Signo exclamación e interrogación" width="20">
         Información del repositorio.
     </h2>
-    <p>Repositorio de DAW116 | Irene Rodríguez, en el que encontrarás información sobre las diferentes prácticas de la asignatura Proggramación (PROG) del curso 2024-2025.</p>
+    <p>Repositorio de DAW116 | Irene Rodríguez, en el que encontrarás información sobre las diferentes prácticas de la asignatura Programación (PROG) del curso 2024-2025.</p>
 </div>
 
 <br>
