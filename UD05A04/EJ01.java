@@ -1,6 +1,12 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
+import java.util.ListIterator;
 
+/**
+ *
+ * @author irene.rodrod.2
+ */
 public class EJ01 {
 
     public static void main(String[] args) {
@@ -50,6 +56,10 @@ public class EJ01 {
                     }
 
                 case 2: // Mostrar contenido
+                    ListIterator<Integer> iterador=lista.listIterator();
+                    while(iterador.hasNext()){
+                        System.out.println(iterador.next());
+                    }
                     System.out.println("Contenido: " + lista);
 
                 case 3: // Mostrar número por posición
@@ -62,78 +72,135 @@ public class EJ01 {
                     }
 
                 case 4: // Mostrar contenido en orden inverso
-                    System.out.println("Contenido en orden inverso:");
-                    for (int i = lista.size() - 1; i >= 0; i--) {
-                        System.out.print(lista.get(i) + " ");
+                    ListIterator<Integer>iterador = lista.listIterator(lista.size()-1);
+                    while(iterador.hasPrevious()) {
+                        System.out.println(iterador.previous());
                     }
+
+                    //System.out.println("Contenido en orden inverso:");
+                    //for (int i = lista.size() - 1; i >= 0; i--) {
+                    //    System.out.print(lista.get(i) + " ");
+                    //}
                     System.out.println();
 
                 case 5: // Mostrar número de elementos
                     System.out.println("Número de elementos: " + lista.size());
 
                 case 6: // Mostrar la media
-                    if (!lista.isEmpty()) {
-                        double media = lista.stream().mapToInt(Integer::intValue).average().orElse(0);
-                        System.out.println("Media de los números: " + media);
-                    } else {
-                        System.out.println("El ArrayList está vacío.");
+                    float acumulador=0;
+                    for(Integer elemento: lista) {
+                        acumulador+=elemento;
                     }
+                    System.out.println(acumulador/lista.size());
+
+                    //if (!lista.isEmpty()) {
+                    //    double media = lista.stream().mapToInt(Integer::intValue).average().orElse(0);
+                    //    System.out.println("Media de los números: " + media);
+                    //} else {
+                    //    System.out.println("El ArrayList está vacío.");
+                    //}
 
                 case 7: // Cambiar entero por 0 en una posición
-                    System.out.print("Introduce la posición: ");
-                    int posReemplazar = teclado.nextInt();
-                    if (posReemplazar >= 0 && posReemplazar < lista.size()) {
-                        lista.set(posReemplazar, 0);
-                        System.out.println("Número reemplazado por 0.");
+                    System.out.print("Introduce una posición: ");
+                    posicion = teclado.nextInt();
+                    if (posicion >= 0 && posicion < lista.size()) {
+                        lista.set(posicion,0);
                     } else {
-                        System.out.println("Posición no válida.");
+                        System.out.println("error");
                     }
+                    
+                    
+                    //System.out.print("Introduce la posición: ");
+                    //int posReemplazar = teclado.nextInt();
+                    //if (posReemplazar >= 0 && posReemplazar < lista.size()) {
+                    //    lista.set(posReemplazar, 0);
+                    //    System.out.println("Número reemplazado por 0.");
+                    //} else {
+                    //    System.out.println("Posición no válida.");
+                    //}
 
                 case 8: // Buscar un entero
-                    System.out.print("Introduce el número a buscar: ");
-                    int buscar = teclado.nextInt();
-                    if (lista.contains(buscar)) {
-                        System.out.println("El número " + buscar + " está en la lista.");
-                    } else {
-                        System.out.println("El número no se encuentra.");
+                    int n = Utilidades.leerEntero(0,10);
+                    if(lista.contains(n)){
+                        System.out.printf("El numero %d se encuentra en la lista \n",n);
                     }
+
+
+                    //System.out.print("Introduce el número a buscar: ");
+                    //int buscar = teclado.nextInt();
+                    //if (lista.contains(buscar)) {
+                    //    System.out.println("El número " + buscar + " está en la lista.");
+                    //} else {
+                    //    System.out.println("El número no se encuentra.");
+                    //}
 
                 case 9: // Mostrar posición de un entero
-                    System.out.print("Introduce el número a buscar: ");
-                    int buscarPos = teclado.nextInt();
-                    int indice = lista.indexOf(buscarPos);
-                    if (indice != -1) {
-                        System.out.println("El número está en la posición: " + indice);
+                    n=Utilidades.leerEntero(0,10);
+                    posicion=lista.indexOf(n);
+                    if(posicion!=-1){
+                        System.out.printf("Se encuentra en la posicion %d\n",posicion);
                     } else {
-                        System.out.println("El número no se encuentra.");
+                        System.out.print("No se encuentra en la lista");
                     }
+                    
+                    
+                    //System.out.print("Introduce el número a buscar: ");
+                    //int buscarPos = teclado.nextInt();
+                    //int indice = lista.indexOf(buscarPos);
+                    //if (indice != -1) {
+                    //    System.out.println("El número está en la posición: " + indice);
+                    //} else {
+                    //    System.out.println("El número no se encuentra.");
+                    //}
 
                 case 10: // Eliminar un entero
-                    System.out.print("Introduce el número a eliminar: ");
-                    int eliminar = teclado.nextInt();
-                    if (lista.remove(Integer.valueOf(eliminar))) {
-                        System.out.println("Número eliminado.");
+                    n=Utilidades.leerEntero(0,10);
+                    if (lista.remove(Integer.valueOf(n))) {
+                        System.out.println("Elemento eliminado");
                     } else {
-                        System.out.println("El número no está en la lista.");
+                        System.out.println("No se ha podido eliminar el elemento");
                     }
+                    
+                    
+                    //System.out.print("Introduce el número a eliminar: ");
+                    //int eliminar = teclado.nextInt();
+                    //if (lista.remove(Integer.valueOf(eliminar))) {
+                    //    System.out.println("Número eliminado.");
+                    //} else {
+                    //    System.out.println("El número no está en la lista.");
+                    //}
 
                 case 11: // Insertar 0 en una posición
                     System.out.print("Introduce la posición para insertar 0: ");
-                    int insertarPos = teclado.nextInt();
-                    if (insertarPos >= 0 && insertarPos <= lista.size()) {
-                        lista.add(insertarPos, 0);
-                        System.out.println("0 insertado.");
+                    posicion=teclado.nextInt();
+                    if (posicion >= 0 && posicion <= lista.size()) {
+                        lista.add(posicion, 0);
                     } else {
-                        System.out.println("Posición no válida.");
+                        System.out.println("Error");
                     }
+                    
+                    //System.out.print("Introduce la posición para insertar 0: ");
+                    //int insertarPos = teclado.nextInt();
+                    //if (insertarPos >= 0 && insertarPos <= lista.size()) {
+                    //    lista.add(insertarPos, 0);
+                    //    System.out.println("0 insertado.");
+                    //} else {
+                    //    System.out.println("Posición no válida.");
+                    //}
 
                 case 12: // Ordenar elementos
                     Collections.sort(lista);
-                    System.out.println("Elementos ordenados: " + lista);
+                    lista.forEach(System.out::print);
+                    
+                    //System.out.println("Elementos ordenados: " + lista);
 
                 case 13: // Ordenar en orden inverso
-                    lista.sort(Collections.reverseOrder());
-                    System.out.println("Elementos en orden inverso: " + lista);
+                    Collections.sort(lista, Comparator.reverseOrder());
+                    lista.sort(Comparator.reverseOrder());
+                    lista.forEach(System.out::println);
+                    
+                    //lista.sort(Collections.reverseOrder());
+                    //System.out.println("Elementos en orden inverso: " + lista);
 
                 case 14: // Mostrar mayor y menor
                     if (!lista.isEmpty()) {
@@ -145,27 +212,32 @@ public class EJ01 {
                     }
 
                 case 15: // Rotar elementos a la derecha
-                    if (!lista.isEmpty()) {
-                        lista.add(0, lista.remove(lista.size() - 1));
-                        System.out.println("Elementos rotados.");
-                    } else {
-                        System.out.println("El ArrayList está vacío.");
-                    }
+                    Collections.rotate(lista, 1);
+                    
+                    //if (!lista.isEmpty()) {
+                    //    lista.add(0, lista.remove(lista.size() - 1));
+                    //    System.out.println("Elementos rotados.");
+                    //} else {
+                    //    System.out.println("El ArrayList está vacío.");
+                    //}
 
                 case 16: // Intercambiar primer y último elemento
-                    if (lista.size() > 1) {
-                        int primero = lista.get(0);
-                        int ultimo = lista.get(lista.size() - 1);
-                        lista.set(0, ultimo);
-                        lista.set(lista.size() - 1, primero);
-                        System.out.println("Primer y último elemento intercambiados.");
-                    } else {
-                        System.out.println("No hay suficientes elementos para intercambiar.");
-                    }
+                    Collections.swap(lista,0,lista.size()-1);
+                    
+                    //if (lista.size() > 1) {
+                    //    int primero = lista.get(0);
+                    //    int ultimo = lista.get(lista.size() - 1);
+                    //    lista.set(0, ultimo);
+                    //    lista.set(lista.size() - 1, primero);
+                    //    System.out.println("Primer y último elemento intercambiados.");
+                    //} else {
+                    //    System.out.println("No hay suficientes elementos para intercambiar.");
+                    //}
 
                 case 17: // Eliminar todos los elementos
                     lista.clear();
-                    System.out.println("Todos los elementos eliminados.");
+                    
+                    //System.out.println("Todos los elementos eliminados.");
 
                 case 0: // Salir del programa
                     System.out.println("Saliendo del programa...");
