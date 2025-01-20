@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
-import java.util.ListIterator;
+import java.util.Scanner;
 
 /**
  *
@@ -14,7 +13,7 @@ public class EJ01 {
         ArrayList<Integer> lista = new ArrayList<>();
 
         // Scanner para leer datos del usuario
-        Scanner teclado = new java.util.Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
 
         int opcion; // Variable para almacenar la opción del menú
 
@@ -45,7 +44,8 @@ public class EJ01 {
 
             switch (opcion) {
 
-                case 1 -> {// Añadir un entero
+                case 1 -> {
+                    // Añadir un entero
                     System.out.print("Introduce un entero (0-10): ");
                     int numero = teclado.nextInt();
                     if (numero >= 0 && numero <= 10) {
@@ -56,11 +56,13 @@ public class EJ01 {
                     }
                 }
 
-                case 2 -> { // Mostrar contenido
+                case 2 -> {
+                    // Mostrar contenido
                     System.out.println("Contenido: " + lista);
                 }
 
-                case 3 -> { // Mostrar número por posición
+                case 3 -> {
+                    // Mostrar número por posición
                     System.out.print("Introduce una posición: ");
                     int posicion = teclado.nextInt();
                     if (posicion >= 0 && posicion < lista.size()) {
@@ -70,24 +72,22 @@ public class EJ01 {
                     }
                 }
 
-                case 4 -> { // Mostrar contenido en orden inverso
+                case 4 -> {
+                    // Mostrar contenido en orden inverso
                     System.out.println("Contenido en orden inverso:");
                     for (int i = lista.size() - 1; i >= 0; i--) {
                         System.out.print(lista.get(i) + " ");
                     }
-
-                    //System.out.println("Contenido en orden inverso:");
-                    //for (int i = lista.size() - 1; i >= 0; i--) {
-                    //    System.out.print(lista.get(i) + " ");
-                    //}
                     System.out.println();
                 }
 
-                case 5 -> { // Mostrar número de elementos
+                case 5 -> {
+                    // Mostrar número de elementos
                     System.out.println("Número de elementos: " + lista.size());
                 }
 
-                case 6 -> { // Mostrar la media
+                case 6 -> {
+                    // Mostrar la media
                     if (!lista.isEmpty()) {
                         double media = lista.stream().mapToInt(Integer::intValue).average().orElse(0);
                         System.out.println("Media de los números: " + media);
@@ -96,18 +96,20 @@ public class EJ01 {
                     }
                 }
 
-                case 7 -> { // Cambiar entero por 0 en una posición
+                case 7 -> {
+                    // Cambiar entero por 0 en una posición
                     System.out.print("Introduce la posición: ");
                     int posReemplazar = teclado.nextInt();
                     if (posReemplazar >= 0 && posReemplazar < lista.size()) {
                         lista.set(posReemplazar, 0);
                         System.out.println("Número reemplazado por 0.");
                     } else {
-                        System.out.println("error");
+                        System.out.println("Posición no válida.");
                     }
                 }
 
-                case 8 -> { // Buscar un entero
+                case 8 -> {
+                    // Buscar un entero
                     System.out.print("Introduce el número a buscar: ");
                     int buscar = teclado.nextInt();
                     if (lista.contains(buscar)) {
@@ -117,48 +119,55 @@ public class EJ01 {
                     }
                 }
 
-                case 9 -> { // Mostrar posición de un entero
-                    System.out.println("Introduce el número a buscar: ");
+                case 9 -> {
+                    // Mostrar posición de un entero
+                    System.out.print("Introduce el número a buscar: ");
                     int buscarPos = teclado.nextInt();
                     int indice = lista.indexOf(buscarPos);
                     if (indice != -1) {
                         System.out.println("El número está en la posición: " + indice);
                     } else {
-                        System.out.print("No se encuentra en la lista");
+                        System.out.println("No se encuentra en la lista.");
                     }
                 }
 
-                case 10 -> { // Eliminar un entero
+                case 10 -> {
+                    // Eliminar un entero
                     System.out.print("Introduce el número a eliminar: ");
                     int eliminar = teclado.nextInt();
                     if (lista.remove(Integer.valueOf(eliminar))) {
                         System.out.println("Número eliminado.");
                     } else {
-                        System.out.println("No se ha podido eliminar el elemento");
+                        System.out.println("No se ha encontrado el número en la lista.");
                     }
                 }
 
-                case 11 -> { // Insertar 0 en una posición
+                case 11 -> {
+                    // Insertar 0 en una posición
                     System.out.print("Introduce la posición para insertar 0: ");
-                    posicion=teclado.nextInt();
+                    int posicion = teclado.nextInt();
                     if (posicion >= 0 && posicion <= lista.size()) {
                         lista.add(posicion, 0);
+                        System.out.println("0 insertado en la posición " + posicion);
                     } else {
-                        System.out.println("Error");
+                        System.out.println("Posición no válida.");
                     }
                 }
 
-                case 12 -> { // Ordenar elementos
+                case 12 -> {
+                    // Ordenar elementos
                     Collections.sort(lista);
                     System.out.println("Elementos ordenados: " + lista);
                 }
 
-                case 13 -> { // Ordenar en orden inverso
+                case 13 -> {
+                    // Ordenar en orden inverso
                     lista.sort(Collections.reverseOrder());
                     System.out.println("Elementos en orden inverso: " + lista);
                 }
 
-                case 14 -> { // Mostrar mayor y menor
+                case 14 -> {
+                    // Mostrar mayor y menor
                     if (!lista.isEmpty()) {
                         int max = Collections.max(lista);
                         int min = Collections.min(lista);
@@ -168,16 +177,18 @@ public class EJ01 {
                     }
                 }
 
-                case 15 -> { // Rotar elementos a la derecha
+                case 15 -> {
+                    // Rotar elementos a la derecha
                     if (!lista.isEmpty()) {
                         lista.add(0, lista.remove(lista.size() - 1));
-                        System.out.println("Elementos rotados.");
+                        System.out.println("Elementos rotados a la derecha.");
                     } else {
                         System.out.println("El ArrayList está vacío.");
                     }
                 }
 
-                case 16 -> { // Intercambiar primer y último elemento
+                case 16 -> {
+                    // Intercambiar primer y último elemento
                     if (lista.size() > 1) {
                         int primero = lista.get(0);
                         int ultimo = lista.get(lista.size() - 1);
@@ -189,15 +200,21 @@ public class EJ01 {
                     }
                 }
 
-                case 17 -> { // Eliminar todos los elementos
+                case 17 -> {
+                    // Eliminar todos los elementos
                     lista.clear();
                     System.out.println("Todos los elementos eliminados.");
                 }
 
-                case 0 -> { // Salir del programa
+                case 0 -> {
+                    // Salir del programa
                     System.out.println("Saliendo del programa...");
                 }
+
+                default -> System.out.println("Opción no válida. Intenta de nuevo.");
             }
-        } while (opcion != 0); // Mantener el menú hasta que el usuario elija salir
+        } while (opcion != 0);
+
+        teclado.close();
     }
 }
