@@ -1,4 +1,3 @@
-
 import java.util.LinkedList;
 import java.util.Collections;
 
@@ -56,28 +55,31 @@ public class EJ02 {
                     System.out.println("Número añadido en la primera posición.");
                 }
 
-                    case 4: // Insertar un entero en la última posición
+                case 4 -> { // Insertar un entero en la última posición
                     System.out.print("Introduce un entero para la última posición: ");
                     int ultimo = teclado.nextInt();
                     lista.addLast(ultimo);
                     System.out.println("Número añadido en la última posición.");
+                }
 
-                    case 5: // Mostrar contenido en orden inverso
+                case 5 -> { // Mostrar contenido en orden inverso
                     System.out.println("Contenido en orden inverso:");
                     for (int i = lista.size() - 1; i >= 0; i--) {
                         System.out.print(lista.get(i) + " ");
                     }
                     System.out.println();
+                }
 
-                    case 6: // Mostrar el primer y último elemento
+                case 6 -> { // Mostrar el primer y último elemento
                     if (!lista.isEmpty()) {
                         System.out.println("Primer elemento: " + lista.getFirst());
                         System.out.println("Último elemento: " + lista.getLast());
                     } else {
                         System.out.println("El LinkedList está vacío.");
                     }
+                }
 
-                    case 7: // Eliminar el primer y último elemento
+                case 7 -> { // Eliminar el primer y último elemento
                     if (!lista.isEmpty()) {
                         lista.removeFirst();
                         lista.removeLast();
@@ -85,8 +87,9 @@ public class EJ02 {
                     } else {
                         System.out.println("El LinkedList está vacío.");
                     }
+                }
 
-                    case 8: // Eliminar la primera aparición de un número
+                case 8 -> { // Eliminar la primera aparición de un número
                     System.out.print("Introduce el número a eliminar (primera aparición): ");
                     int eliminarPrimero = teclado.nextInt();
                     if (lista.removeFirstOccurrence(eliminarPrimero)) {
@@ -94,8 +97,9 @@ public class EJ02 {
                     } else {
                         System.out.println("Número no encontrado.");
                     }
+                }
 
-                    case 9: // Eliminar la última aparición de un número
+                case 9 -> { // Eliminar la última aparición de un número
                     System.out.print("Introduce el número a eliminar (última aparición): ");
                     int eliminarUltimo = teclado.nextInt();
                     if (lista.removeLastOccurrence(eliminarUltimo)) {
@@ -103,16 +107,19 @@ public class EJ02 {
                     } else {
                         System.out.println("Número no encontrado.");
                     }
+                }
 
-                    case 10: // Ordenar los elementos
+                case 10 -> { // Ordenar los elementos
                     Collections.sort(lista);
                     System.out.println("Elementos ordenados: " + lista);
+                }
 
-                    case 11: // Invertir el orden de los elementos
+                case 11 -> { // Invertir el orden de los elementos
                     Collections.reverse(lista);
                     System.out.println("Elementos invertidos: " + lista);
+                }
 
-                    case 12: // Mostrar cuántas veces aparece cada número
+                case 12 -> { // Mostrar cuántas veces aparece cada número
                     if (!lista.isEmpty()) {
                         System.out.println("Frecuencia de números:");
                         for (int i = 0; i <= 10; i++) {
@@ -124,13 +131,16 @@ public class EJ02 {
                     } else {
                         System.out.println("El LinkedList está vacío.");
                     }
+                }
 
-                    case 13: // Eliminar todos los elementos
+                case 13 -> { // Eliminar todos los elementos
                     lista.clear();
                     System.out.println("Todos los elementos eliminados.");
+                }
 
-                    case 0: // Salir del programa
+                case 0 -> { // Salir del programa
                     System.out.println("Saliendo del programa...");
+                }
             }
         } while (opcion != 0); // Mantener el menú hasta que el usuario elija salir
     }
