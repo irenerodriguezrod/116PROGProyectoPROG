@@ -13,7 +13,7 @@ public class EJ02 {
 
         do {
             // Menú de opciones
-            System.out.println("\nMenú de Opciones:");
+            System.out.println("Menú de Opciones:");
             System.out.println("1. Añadir un entero");
             System.out.println("2. Mostrar contenido");
             System.out.println("3. Insertar un entero en la primera posición");
@@ -34,7 +34,7 @@ public class EJ02 {
 
             switch (opcion) {
 
-                case 1: // Añadir un entero
+                case 1 -> { // Añadir un entero
                     System.out.print("Introduce un entero (0-10): ");
                     int numero = teclado.nextInt();
                     if (numero >= 0 && numero <= 10) {
@@ -43,15 +43,18 @@ public class EJ02 {
                     } else {
                         System.out.println("Número fuera de rango.");
                     }
+                }
 
-                    case 2: // Mostrar contenido
+                case 2 -> { // Mostrar contenido
                     System.out.println("Contenido: " + lista);
+                }
 
-                    case 3: // Insertar un entero en la primera posición
+                case 3 -> { // Insertar un entero en la primera posición
                     System.out.print("Introduce un entero para la primera posición: ");
                     int primero = teclado.nextInt();
                     lista.addFirst(primero);
                     System.out.println("Número añadido en la primera posición.");
+                }
 
                     case 4: // Insertar un entero en la última posición
                     System.out.print("Introduce un entero para la última posición: ");
