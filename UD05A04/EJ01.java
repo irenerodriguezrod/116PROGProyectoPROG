@@ -1,11 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
-<<<<<<< HEAD
-import java.util.Scanner;
-=======
 import java.util.Comparator;
 import java.util.ListIterator;
->>>>>>> 5fe48a9564062992cf4e360497b7f0b95d16cd8e
 
 /**
  *
