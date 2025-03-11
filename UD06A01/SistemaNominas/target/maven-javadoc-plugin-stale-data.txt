@@ -1,0 +1,41 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-source
+'21'
+-sourcepath
+'C:/Users/Irene/OneDrive - Educacyl/DAW24-25/PROG/TAREAS/UD06A01/SistemaNominas/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2025. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Irene/OneDrive - Educacyl/DAW24-25/PROG/TAREAS/UD06A01/SistemaNominas/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'SistemaNominas 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'SistemaNominas 1.0-SNAPSHOT API'
+com.mycompany.sistemanominas
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD06A01\SistemaNominas\src\main\java = 1738601034093
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD06A01\SistemaNominas\target\reports\apidocs\allclasses-index.html = 1738771416774
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD06A01\SistemaNominas\target\reports\apidocs\allpackages-index.html = 1738771416779
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD06A01\SistemaNominas\target\reports\apidocs\element-list = 1738771416690
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD06A01\SistemaNominas\target\reports\apidocs\help-doc.html = 1738771416816
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD06A01\SistemaNominas\target\reports\apidocs\index-all.html = 1738771416806
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD06A01\SistemaNominas\target\reports\apidocs\index.html = 1738771416811
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD06A01\SistemaNominas\target\reports\apidocs\member-search-index.js = 1738771416785
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD06A01\SistemaNominas\target\reports\apidocs\module-search-index.js = 1738771416782
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD06A01\SistemaNominas\target\reports\apidocs\overview-tree.html = 1738771416755
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD06A01\SistemaNominas\target\reports\apidocs\package-search-index.js = 1738771416783
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD06A01\SistemaNominas\target\reports\apidocs\search.html = 1738771416809
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD06A01\SistemaNominas\target\reports\apidocs\tag-search-index.js = 1738771416787
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD06A01\SistemaNominas\target\reports\apidocs\type-search-index.js = 1738771416785

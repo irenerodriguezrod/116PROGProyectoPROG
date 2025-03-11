@@ -1,0 +1,41 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-source
+'21'
+-sourcepath
+'C:/Users/Irene/OneDrive - Educacyl/DAW24-25/PROG/TAREAS/UD05A06/banco/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2025. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Irene/OneDrive - Educacyl/DAW24-25/PROG/TAREAS/UD05A06/banco/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'banco 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'banco 1.0-SNAPSHOT API'
+es.sauces.banco
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD05A06\banco\src\main\java = 1737975918829
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD05A06\banco\target\reports\apidocs\allclasses-index.html = 1738770548697
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD05A06\banco\target\reports\apidocs\allpackages-index.html = 1738770548708
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD05A06\banco\target\reports\apidocs\element-list = 1738770548613
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD05A06\banco\target\reports\apidocs\help-doc.html = 1738770548746
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD05A06\banco\target\reports\apidocs\index-all.html = 1738770548731
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD05A06\banco\target\reports\apidocs\index.html = 1738770548741
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD05A06\banco\target\reports\apidocs\member-search-index.js = 1738770548716
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD05A06\banco\target\reports\apidocs\module-search-index.js = 1738770548711
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD05A06\banco\target\reports\apidocs\overview-tree.html = 1738770548673
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD05A06\banco\target\reports\apidocs\package-search-index.js = 1738770548713
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD05A06\banco\target\reports\apidocs\search.html = 1738770548738
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD05A06\banco\target\reports\apidocs\tag-search-index.js = 1738770548718
+C:\Users\Irene\OneDrive - Educacyl\DAW24-25\PROG\TAREAS\UD05A06\banco\target\reports\apidocs\type-search-index.js = 1738770548714
